@@ -20,12 +20,16 @@ let Seattle = {
 
     render: function () {
         let parent = document.getElementById('parent');
+
+        let locationName= document.createElement('h2');
+        parent.appendChild(locationName);
+        locationName.textContent=this.Place;
+
         let unelemnt = document.createElement('ul');
         parent.appendChild(unelemnt);
         console.log(parent);
         let sum = 0;
-        let resturantPlace = document.getElementById('resturantPlace');
-        resturantPlace.textContent = 'Seattle';
+        
         for (let j = 0; j < restoruntWorkingTime.length; j++) {
             let lielemnt = document.createElement('li');
             unelemnt.appendChild(lielemnt);
@@ -59,12 +63,16 @@ let tokyo = {
 
     render: function () {
         let parent = document.getElementById('parent');
+
+        let locationName= document.createElement('h2');
+        parent.appendChild(locationName);
+        locationName.textContent=this.Place;
+
         let unelemnt = document.createElement('ul');
         parent.appendChild(unelemnt);
         console.log(parent);
         let sum = 0;
-        let resturantPlace = document.getElementById('resturantPlace');
-        resturantPlace.textContent = 'tokyo';
+        
         for (let j = 0; j < restoruntWorkingTime.length; j++) {
             let lielemnt = document.createElement('li');
             unelemnt.appendChild(lielemnt);
@@ -98,12 +106,17 @@ let Dubai = {
 
     render: function () {
         let parent = document.getElementById('parent');
+
+        let locationName= document.createElement('h2');
+        parent.appendChild(locationName);
+        locationName.textContent=this.Place;
+
         let unelemnt = document.createElement('ul');
         parent.appendChild(unelemnt);
         console.log(parent);
         let sum = 0;
-        let resturantPlace = document.getElementById('resturantPlace');
-        resturantPlace.textContent = 'Dubai';
+        
+
         for (let j = 0; j < restoruntWorkingTime.length; j++) {
             let lielemnt = document.createElement('li');
             unelemnt.appendChild(lielemnt);
@@ -137,12 +150,16 @@ let Paris = {
 
     render: function () {
         let parent = document.getElementById('parent');
+
+        let locationName= document.createElement('h2');
+        parent.appendChild(locationName);
+        locationName.textContent=this.Place;
+
         let unelemnt = document.createElement('ul');
         parent.appendChild(unelemnt);
         console.log(parent);
         let sum = 0;
-        let resturantPlace = document.getElementById('resturantPlace');
-        resturantPlace.textContent = 'Paris';
+        
         for (let j = 0; j < restoruntWorkingTime.length; j++) {
             let lielemnt = document.createElement('li');
             unelemnt.appendChild(lielemnt);
@@ -176,12 +193,17 @@ let Lima = {
 
     render: function () {
         let parent = document.getElementById('parent');
+
+        let locationName= document.createElement('h2');
+        parent.appendChild(locationName);
+        locationName.textContent=this.Place;
+
         let unelemnt = document.createElement('ul');
         parent.appendChild(unelemnt);
         console.log(parent);
         let sum = 0;
-        let resturantPlace = document.getElementById('resturantPlace');
-        resturantPlace.textContent = 'Lima';
+        
+
         for (let j = 0; j < restoruntWorkingTime.length; j++) {
             let lielemnt = document.createElement('li');
             unelemnt.appendChild(lielemnt);
