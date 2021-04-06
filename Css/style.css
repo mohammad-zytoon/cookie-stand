@@ -6,3 +6,34 @@
     border: solid black 1px;
     border-collapse: collapse;
   }
+
+  img{
+    display: block;
+    width: 30%;
+    margin: 5% auto;
+    
+  }
+
+  section{
+    display: flex;
+  }
+  header h1 {
+    text-align: center;
+    font-family: 'Train One', cursive;
+    color: orange;
+  }
+
+  div{
+    font-family: 'Train One', cursive;
+    color: rgb(224, 132, 10);
+
+    margin-left: 360px;
+
+  }
+
+ footer{
+   background-color: palegoldenrod;
+   text-align: center;
+
+ }
+ 
