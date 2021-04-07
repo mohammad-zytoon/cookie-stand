@@ -8,8 +8,10 @@ console.log(storesPlace);
 let restoruntWorkingTime = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 let parent = document.getElementById('parent');
+let container= document.getElementById('parent');
+
 //
-let cookieStand = document.getElementById('cookieStand');
+
 
 function StoresPlaceDetails(place, minimum, maximum, avarage) {
     this.place = place;
@@ -85,7 +87,7 @@ StoresPlaceDetails.prototype.render = function () {
     tdelemnts = document.createElement('td');
     tdelemnts.textContent = this.totalSalesPerDay
     trelemnts.appendChild(tdelemnts);
-    parent.appendChild(trelemnts);
+    tableElemntsNew.appendChild(trelemnts);
 }
 
 function totalHourlyCookiesSales() {
@@ -113,7 +115,7 @@ function totalHourlyCookiesSales() {
     tdelemnts = document.createElement('td');
     tdelemnts.textContent = totalOfSum;
     trelemnts.appendChild(tdelemnts);
-    parent.appendChild(trelemnts);
+    tableElemntsNew.appendChild(trelemnts);
 }
 function renderAllOfIt() {
     for (let i in storesPlace) {
@@ -121,23 +123,32 @@ function renderAllOfIt() {
         //storesPlace[i].getrandomNumber();
     }
 }
-cookieStand.addEventListener('submit', addingStore);
+let cookieStand = document.getElementById('cookieStand');
+
+cookieStand.addEventListener('submit',addingStore);
 
 function addingStore(event) {
-    let newPlace = event.target.place.value;
-    let newMinimum = event.target.minimum.value;
-    let newMaximum = event.target.maximum.value;
-    let newAvarage = event.target.avarage.value;
+   
+    event.preventDefault();
 
-
-    let newStore = StoresPlaceDetails(newPlace, newMinimum, newMaximum, newAvarage)
-
-    tableElemntsNew.innerHTML = '';
+    let place = event.target.placeField.value;
+    let minimum = event.target.minimumField.value;
+    let maximum = event.target.maximumField.value;
+    let avarage = event.target.avarageField.value;
+    
+    
+    let newStore = new StoresPlaceDetails (place, minimum, maximum, avarage)
+    
+    
+    tableElemntsNew.textContent = '';
     standsHours();
     renderAllOfIt();
     totalHourlyCookiesSales();
-
+    
 }
+
+
+
 standsHours();
 renderAllOfIt();
 totalHourlyCookiesSales();
